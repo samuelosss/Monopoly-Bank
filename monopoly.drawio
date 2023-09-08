@@ -1,0 +1,144 @@
+<mxfile host="app.diagrams.net" modified="2023-09-06T10:07:23.150Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.62" etag="KcgWxWdzG7sW3bWSIhxK" version="21.7.2" type="device">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="666" dy="555" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-2" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-3" target="uq7SR7EPjwyAUjCOz7Xc-0" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-3" value="MOVE persona icon to other persona icon&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="50" y="10" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uq7SR7EPjwyAUjCOz7Xc-0" target="uq7SR7EPjwyAUjCOz7Xc-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-0" value="create modal;&lt;br&gt;say who&#39;s paying to who;&lt;br&gt;input amount" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="50" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uq7SR7EPjwyAUjCOz7Xc-2" target="uq7SR7EPjwyAUjCOz7Xc-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-2" value="play sound;&lt;br&gt;close modal;&lt;br&gt;deduct giver&#39;s account;&lt;br&gt;top-up reciever&#39;s account" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="40" y="180" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-5" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uq7SR7EPjwyAUjCOz7Xc-6" target="uq7SR7EPjwyAUjCOz7Xc-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-6" value="MOVE persona icon to ALL icon&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="230" y="10" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uq7SR7EPjwyAUjCOz7Xc-8" target="uq7SR7EPjwyAUjCOz7Xc-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-8" value="create modal;&lt;br&gt;say who&#39;s paying to ALL;&lt;br&gt;input amount" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="230" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uq7SR7EPjwyAUjCOz7Xc-9" target="uq7SR7EPjwyAUjCOz7Xc-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-9" value="play sound;&lt;br&gt;close modal;&lt;br&gt;top-up&amp;nbsp;ALL but reciever&#39;s and bank&#39;s account;&lt;br&gt;deduct giver&#39;s account by amount * number of recievers" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="210" y="180" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-10" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uq7SR7EPjwyAUjCOz7Xc-11" target="uq7SR7EPjwyAUjCOz7Xc-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-11" value="MOVE - ALL icon to persona icon&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="410" y="10" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uq7SR7EPjwyAUjCOz7Xc-13" target="uq7SR7EPjwyAUjCOz7Xc-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-13" value="create modal;&lt;br&gt;say who&#39;re ALL&amp;nbsp;&lt;br&gt;paying to;&lt;br&gt;input amount" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="410" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uq7SR7EPjwyAUjCOz7Xc-14" target="uq7SR7EPjwyAUjCOz7Xc-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-14" value="play sound;&lt;br&gt;close modal;&lt;br&gt;deduct&amp;nbsp;ALL but giver&#39;s and bank&#39;s account;&lt;br&gt;top-up reciever&#39;s account by amount * number of givers" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="390" y="180" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-15" value="update LEDGER:&lt;br&gt;timestamp, giver, reciever, amount" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="70" y="390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uq7SR7EPjwyAUjCOz7Xc-24" target="uq7SR7EPjwyAUjCOz7Xc-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-24" value="Pass GO button" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="590" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uq7SR7EPjwyAUjCOz7Xc-25" target="uq7SR7EPjwyAUjCOz7Xc-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-25" value="update player&#39;s account;&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="570" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uq7SR7EPjwyAUjCOz7Xc-28" target="uq7SR7EPjwyAUjCOz7Xc-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-28" value="HOD KOSTKOU" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="340" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-29" value="AGAIN lze zmacknout&lt;br&gt;ale CLOSE - ZVYRAZNENO" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="520" y="540" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uq7SR7EPjwyAUjCOz7Xc-33" target="uq7SR7EPjwyAUjCOz7Xc-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uq7SR7EPjwyAUjCOz7Xc-33" target="uq7SR7EPjwyAUjCOz7Xc-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-33" value="padly dve stejne cisla?&lt;br&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="360" y="540" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uq7SR7EPjwyAUjCOz7Xc-34" target="uq7SR7EPjwyAUjCOz7Xc-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-34" value="tlacitko AGAIN ZVYRAZNENO;&lt;br&gt;tlacitko CLOSE nelze zmacknout;&lt;br&gt;klik zase spusti animaci;&lt;br&gt;zmena &quot;hod c. 2&quot;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="320" y="640" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uq7SR7EPjwyAUjCOz7Xc-35" target="uq7SR7EPjwyAUjCOz7Xc-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-35" value="&quot;hod cislo ( 1 )&quot;&lt;br&gt;animace, kostky litaji az se zastavi;&lt;br&gt;dve kostky cisla;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;soucet cisel;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;tlacitka AGAIN a CLOSE" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="310" y="430" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uq7SR7EPjwyAUjCOz7Xc-36" target="uq7SR7EPjwyAUjCOz7Xc-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uq7SR7EPjwyAUjCOz7Xc-36" target="uq7SR7EPjwyAUjCOz7Xc-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-36" value="padly dve stejne cisla?&lt;br&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="360" y="740" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uq7SR7EPjwyAUjCOz7Xc-37" target="uq7SR7EPjwyAUjCOz7Xc-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-37" value="tlacitko AGAIN ZVYRAZNENO;&lt;br&gt;tlacitko CLOSE nelze zmacknout;&lt;br&gt;klik;&lt;br&gt;zmena &quot;hod c.3&quot;;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="320" y="840" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uq7SR7EPjwyAUjCOz7Xc-39" target="uq7SR7EPjwyAUjCOz7Xc-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uq7SR7EPjwyAUjCOz7Xc-39" target="uq7SR7EPjwyAUjCOz7Xc-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-39" value="padly dve stejne cisla?&lt;br&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="360" y="950" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-45" value="AGAIN lze zmacknout&lt;br&gt;ale CLOSE - ZVYRAZNENO" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="520" y="740" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-48" value="AGAIN lze zmacknout&lt;br&gt;ale CLOSE - ZVYRAZNENO" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="520" y="950" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uq7SR7EPjwyAUjCOz7Xc-49" value="modal pres tento:&lt;br&gt;GO TO JAIL!&lt;br&gt;tlacitko CLOSE - zavira vse" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="330" y="1060" width="140" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,72 @@
+:root {
+	box-sizing: border-box;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0.5rem;
+}
+
+.money-area {
+	border: 1px solid red;
+	display: flex;
+	justify-content: space-between;
+}
+
+.players-area {
+	border: 1px solid green;
+	width: calc((2 / 3) * 100vh);
+}
+
+.player-segment {
+	border: 1px solid blue;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.money {
+	border: 1px solid orange;
+}
+
+.player {
+	border: 1px solid brown;
+}
+
+.salary {
+	border: 1px solid yellow;
+}
+
+.public-area {
+	border: 1px dashed salmon;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: calc(100vw / 3);
+}
+
+.public-area > * {
+	text-align: center;
+}
+
+.bank-house {
+	border: 1px dotted pink;
+}
+
+.all {
+	border: 1px double greenyellow;
+}
+
+.functions-area {
+	border: 1px solid violet;
+	display: flex;
+	justify-content: space-around;
+}
+
+.ledger {
+	border: 1px solid darkcyan;
+}
+
+.dice {
+	border: 1px dashed magenta;
+}
