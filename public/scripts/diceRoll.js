@@ -1,4 +1,4 @@
-// alert("works!");
+// alert("diceRoll works!");
 
 const dice = [1, 2, 3, 4, 5, 6];
 let diceOne = null;

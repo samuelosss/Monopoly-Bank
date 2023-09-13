@@ -1,3 +1,5 @@
+// alert("moneyTransfers works");
+
 //listener for move A to B, function ledgerInput
 
 // initial vars of the game
@@ -80,14 +82,14 @@ $("#new-game").on("click", () => {
 	newGame();
 });
 
-let initialAmount = 0;
-let initialBank = 0;
-let salary = 0;
+let initialAmount = 1500;
+let initialBank = 10000;
+let salary = 200;
 
 //GAME Name XX - adding players page - adding players one by one, added appear above new player line, button modify
 // button NEXT
 const personaAccounts = {
-	bank: initialBank,
+	Bank: initialBank,
 	// person1: { name: "Bank", cash: initialBank },
 	// person2: { name: "Player 1", cash: initialAmount },
 	// person3: { name: "Player 2", cash: initialAmount },
@@ -120,7 +122,6 @@ function playerModify() {
 const newGameInitials = () => {
 	let howMuchEach = prompt("How much will each player star with?");
 	initialAmount = parseInt(howMuchEach);
-
 	// let names = Object.keys(personaAccounts);
 	// personaAccounts[names] = initialAmount; // nope not working, only creates new key/value pair, with names array as key
 	// for (let name in personaAccounts) {
@@ -134,9 +135,7 @@ const newGameInitials = () => {
 	// 		console.log("neco jineho");
 	// 	}
 	// }
-
 	let isFirstKey = true;
-
 	for (let name in personaAccounts) {
 		if (isFirstKey) {
 			// let it continue over first iteration
@@ -163,10 +162,9 @@ const newGameInitials = () => {
             let name = keys[i];
             personaAccounts[name] = initialAmount;
         } */
-
 	let howMuchBank = prompt("How much is in the bank?");
 	initialBank = parseInt(howMuchBank);
-	personaAccounts["bank"] = initialBank;
+	personaAccounts["Bank"] = initialBank;
 	let howMuchGo = prompt(
 		"How much will player recieve salary when passing 'GO'?"
 	);
@@ -175,22 +173,29 @@ const newGameInitials = () => {
 
 let fromPerson;
 let toPerson;
+let amount;
 
 const ledgerInput = (fromPerson, toPerson) => {
 	let amountInput = prompt("How much do you transfer?"); // how much do you transfer
-	let amount = parseFloat(amountInput); // parsing input string to floating-point (decimal) number
+	amount = parseFloat(amountInput); // parsing input string to floating-point (decimal) number
 	if (!isNaN(amount)) {
 		personaAccounts[fromPerson] -= amount;
 		personaAccounts[toPerson] += amount;
 		// for (var i = 1; i <= 6; i++)
 		// 	console.log("Player " + i + " : " + personaAccounts[i]);
-		console.log(personaAccounts[fromPerson]);
-		console.log(personaAccounts[toPerson]);
+		console.log(
+			"New balance " + fromPerson + " " + personaAccounts[fromPerson]
+		);
+		console.log("New balance " + toPerson + " " + personaAccounts[toPerson]);
 	} else {
 		alert("Insert valid number!");
 	}
 };
 
+let ledger = {};
+// 1 { giver: who_pays , reciever: to_whom_he_pays , amount: how_much }
+
+// Perform transfer between two personas clicked in order giver >> reciever and update ledger and their balances
 $(".person").on("click", function () {
 	// take name of the persona clicked
 
@@ -203,9 +208,19 @@ $(".person").on("click", function () {
 		toPerson = $(this).text();
 		console.log("To: " + toPerson);
 
-		ledgerInput();
-		// after this sequence delete variables
+		ledgerInput(fromPerson, toPerson); // perform transaction
 
+		// update ledger
+		(function () {
+			let ledgerLine = Object.keys(ledger).length + 1;
+			ledger[ledgerLine] = {
+				giver: fromPerson,
+				reciever: toPerson,
+				cash: amount,
+			};
+		})();
+
+		// after this sequence delete variables
 		fromPerson = null;
 		toPerson = null;
 	}
