@@ -4,7 +4,7 @@
 
 // initial vars of the game
 
-// let gameName;
+let gameName;
 let timeStamp;
 
 const actualiseDateTime = () => {
@@ -69,18 +69,18 @@ const actualiseDateTime = () => {
 const oldGames = {};
 
 // New game page - just enter name, create name and timestamp when created
-const newGame = (game_name) => {
+const newGame = () => {
 	actualiseDateTime();
+	// gameName = prompt("Game name: ");
 	// let gameNumber = `game-${Object.keys(oldGames).length + 1}`;
 	let gameNumber = Object.keys(oldGames).length + 1;
-	oldGames[gameNumber] = { name: game_name, time: timeStamp };
-	// console.log(oldGames[gameNumber]);
-	// console.log(Object.keys(oldGames));
+	oldGames[gameNumber] = { name: gameName, time: timeStamp };
+	console.log(oldGames[gameNumber]);
 };
 
-// $("#new-game").on("click", () => {
-// 	newGame();
-// });
+$("#new-game").on("click", () => {
+	newGame();
+});
 
 let initialAmount = 1500;
 let initialBank = 10000;
@@ -196,46 +196,46 @@ let ledger = {};
 // 1 { giver: who_pays , reciever: to_whom_he_pays , amount: how_much }
 
 // Perform transfer between two personas clicked in order giver >> reciever and update ledger and their balances
-// $(".person").on("click", function () {
-// 	// take name of the persona clicked
+$(".person").on("click", function () {
+	// take name of the persona clicked
 
-// 	if (!fromPerson) {
-// 		// if empty put something from clicked element
-// 		fromPerson = $(this).text();
-// 		console.log("From: " + fromPerson);
-// 	} else {
-// 		// if fromPerson NOT empty fill toPerson
-// 		toPerson = $(this).text();
-// 		console.log("To: " + toPerson);
+	if (!fromPerson) {
+		// if empty put something from clicked element
+		fromPerson = $(this).text();
+		console.log("From: " + fromPerson);
+	} else {
+		// if fromPerson NOT empty fill toPerson
+		toPerson = $(this).text();
+		console.log("To: " + toPerson);
 
-// 		ledgerInput(fromPerson, toPerson); // perform transaction
+		ledgerInput(fromPerson, toPerson); // perform transaction
 
-// 		// update ledger
-// 		(function () {
-// 			let ledgerLine = Object.keys(ledger).length + 1;
-// 			ledger[ledgerLine] = {
-// 				giver: fromPerson,
-// 				reciever: toPerson,
-// 				cash: amount,
-// 			};
-// 		})();
+		// update ledger
+		(function () {
+			let ledgerLine = Object.keys(ledger).length + 1;
+			ledger[ledgerLine] = {
+				giver: fromPerson,
+				reciever: toPerson,
+				cash: amount,
+			};
+		})();
 
-// 		// after this sequence delete variables
-// 		fromPerson = null;
-// 		toPerson = null;
-// 	}
-// });
+		// after this sequence delete variables
+		fromPerson = null;
+		toPerson = null;
+	}
+});
 
-// $("#add-person").on("click", () => {
-// 	addPerson();
-// });
+$("#add-person").on("click", () => {
+	addPerson();
+});
 
 // $("#ledger").on("click", () => {
 // 	ledgerInput();
 // });
 
-// $("#game-initial").on("click", () => {
-// 	newGameInitials();
-// });
+$("#game-initial").on("click", () => {
+	newGameInitials();
+});
 
-export { personaAccounts, timeStamp, actualiseDateTime, newGame, oldGames };
+export { personaAccounts };

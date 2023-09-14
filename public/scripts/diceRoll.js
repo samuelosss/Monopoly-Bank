@@ -1,3 +1,4 @@
+// client-side js only performing dice roll with some animation later
 // alert("diceRoll works!");
 
 const dice = [1, 2, 3, 4, 5, 6];

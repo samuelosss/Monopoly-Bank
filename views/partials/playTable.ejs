@@ -1,0 +1,47 @@
+<div class="money-area">
+	<div class="players-area">
+		<% let accountsKeys = Object.keys(personaAccounts); %> <% let accountsValues
+		= Object.values(personaAccounts); %> <% for (let i = 1; i <=
+		accountsKeys.length ; i++) { %>
+		<div class="player-segment" id="<%- i %>">
+			<div class="money"><%= accountsValues[i] %></div>
+			<div class="player person"><%= accountsKeys[i] %></div>
+			<div class="salary">Salary / Pass GO</div>
+		</div>
+		<% }; %>
+
+		<div class="player-segment" id="2">
+			<div class="money">1500</div>
+			<div class="player person">Eve</div>
+			<div class="salary">Salary / Pass GO</div>
+		</div>
+		<div class="player-segment" id="3">
+			<div class="money">1500</div>
+			<div class="player person">person3</div>
+			<div class="salary">Salary / Pass GO</div>
+		</div>
+	</div>
+	<div class="public-area">
+		<div class="bank-house person" id="bank">Bank</div>
+		<div class="all person" id="all">ALL</div>
+	</div>
+</div>
+<div class="functions-area">
+	<div class="ledger" id="ledger">LEDGER</div>
+	<div class="dice" id="dice">DICE ROLL</div>
+</div>
+<button id="add-person">Add Person</button>
+<button id="game-initial">New Game Init Amounts</button>
+<button id="new-game">New Game</button><br />
+<!-- <div id="ledger-output"></div> 
+		TOTO JE DALSI KOUSEK
+		-->
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+	integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+	crossorigin="anonymous"
+	referrerpolicy="no-referrer"
+></script>
+<script src="./scripts/diceRoll.js"></script>
+<script src="scripts/moneyTransfers.js"></script>

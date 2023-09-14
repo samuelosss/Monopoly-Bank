@@ -1,0 +1,24 @@
+<%- include("./partials/head.ejs") %>
+<br />
+New Game
+<br />
+<% if (locals.newGameName) { %>
+<h1>New Game Details</h1>
+
+<div>
+	<p>
+		Game <%= gameDetails.gameNumber %> Game name: <%= gameDetails.gameName %>
+		<%= gameDetails.timestamp %>
+	</p>
+</div>
+<% } else { %>
+<br /><br />
+<hr />
+<form action="/new-game" method="post">
+	<input type="text" name="nameOfNewGame" placeholder="Name of your new game" />
+	<br />
+	<input type="submit" value="Create" />
+</form>
+<% } %>
+<br />
+<%- include("partials/footer.ejs") %>
