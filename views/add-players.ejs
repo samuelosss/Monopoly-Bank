@@ -1,0 +1,25 @@
+<%- include("./partials/head.ejs") %> 
+<% if (locals.allGameDetails && locals.allGameDetails.length > 0) { %> 
+Game: <%= allGameDetails[allGameDetails.length - 1].gameName %> 
+<% } else { %>
+allGameDetails empty or some error 
+<% } %> 
+
+<% listOfPlayers.forEach(player => { %>
+    <div>
+        
+        <%= player %>
+       
+    </div>
+<% });   %>
+
+
+<form action="/add-players" method="post">
+	<input type="text" name="playerName" placeholder="Name of player" />
+
+	<input type="submit" value="Add" />
+</form>
+
+<br />
+<a href="./game-initial"><button>NEXT</button></a>
+<%- include("partials/footer.ejs") %>

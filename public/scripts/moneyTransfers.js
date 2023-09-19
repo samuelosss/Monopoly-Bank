@@ -82,30 +82,30 @@ const newGame = (game_name) => {
 // 	newGame();
 // });
 
-let initialAmount = 1500;
-let initialBank = 10000;
-let salary = 200;
+// let initialAmount = 1500;
+// let initialBank = 10000;
+// let salary = 200;
 
-//GAME Name XX - adding players page - adding players one by one, added appear above new player line, button modify
-// button NEXT
-const personaAccounts = {
-	Bank: initialBank,
-	// person1: { name: "Bank", cash: initialBank },
-	// person2: { name: "Player 1", cash: initialAmount },
-	// person3: { name: "Player 2", cash: initialAmount },
-	// rather easier way:
-	// bank: initialBank,
-	Adam: initialAmount,
-	Eve: initialAmount,
-};
+// //GAME Name XX - adding players page - adding players one by one, added appear above new player line, button modify
+// // button NEXT
+// const personaAccounts = {
+// 	Bank: initialBank,
+// 	// person1: { name: "Bank", cash: initialBank },
+// 	// person2: { name: "Player 1", cash: initialAmount },
+// 	// person3: { name: "Player 2", cash: initialAmount },
+// 	// rather easier way:
+// 	// bank: initialBank,
+// 	Adam: initialAmount,
+// 	Eve: initialAmount,
+// };
 
-const addPerson = () => {
-	const newPersonName = prompt("Enter name of the player:");
-	// const startCash = prompt("How much does the player start with?");
-	// const givenCash = parseFloat(startCash);
-	// const newPersonKey = `person${Object.keys(personaAccounts).length + 1}`;
-	personaAccounts[newPersonName] = initialAmount;
-};
+// const addPerson = () => {
+// 	const newPersonName = prompt("Enter name of the player:");
+// 	// const startCash = prompt("How much does the player start with?");
+// 	// const givenCash = parseFloat(startCash);
+// 	// const newPersonKey = `person${Object.keys(personaAccounts).length + 1}`;
+// 	personaAccounts[newPersonName] = initialAmount;
+// };
 
 // player modify -- adding this function only later, quite a headache :)
 function playerModify() {
@@ -119,57 +119,57 @@ function playerModify() {
 
 // button PLAY - will start the game getting you to main game page
 
-const newGameInitials = () => {
-	let howMuchEach = prompt("How much will each player star with?");
-	initialAmount = parseInt(howMuchEach);
-	// let names = Object.keys(personaAccounts);
-	// personaAccounts[names] = initialAmount; // nope not working, only creates new key/value pair, with names array as key
-	// for (let name in personaAccounts) {
-	// 	let firstElement = Object.keys(personaAccounts)[0];
+// const newGameInitials = () => {
+// 	let howMuchEach = prompt("How much will each player star with?");
+// 	initialAmount = parseInt(howMuchEach);
+// 	// let names = Object.keys(personaAccounts);
+// 	// personaAccounts[names] = initialAmount; // nope not working, only creates new key/value pair, with names array as key
+// 	// for (let name in personaAccounts) {
+// 	// 	let firstElement = Object.keys(personaAccounts)[0];
 
-	// 	if (firstElement) {
-	// 		continue;
-	// 		console.log("neco");
-	// 	} else {
-	// 		personaAccounts[name] = initialAmount;
-	// 		console.log("neco jineho");
-	// 	}
-	// }
-	let isFirstKey = true;
-	for (let name in personaAccounts) {
-		if (isFirstKey) {
-			// let it continue over first iteration
-			isFirstKey = false; // set false, so every other iteration goes through
-			continue;
-		}
-		personaAccounts[name] = initialAmount;
-	}
-	// another way would be for loop with numbered index and starting from 1 instead of 0
-	/* 
-    // Get an array of keys from personaAccounts
-    let keys = Object.keys(personaAccounts);
+// 	// 	if (firstElement) {
+// 	// 		continue;
+// 	// 		console.log("neco");
+// 	// 	} else {
+// 	// 		personaAccounts[name] = initialAmount;
+// 	// 		console.log("neco jineho");
+// 	// 	}
+// 	// }
+// 	let isFirstKey = true;
+// 	for (let name in personaAccounts) {
+// 		if (isFirstKey) {
+// 			// let it continue over first iteration
+// 			isFirstKey = false; // set false, so every other iteration goes through
+// 			continue;
+// 		}
+// 		personaAccounts[name] = initialAmount;
+// 	}
+// 	// another way would be for loop with numbered index and starting from 1 instead of 0
+// 	/*
+//     // Get an array of keys from personaAccounts
+//     let keys = Object.keys(personaAccounts);
 
-    // Check if there are keys in the object
-    if (keys.length > 0) {
-        // Get the first key
-        let firstKey = keys[0];
+//     // Check if there are keys in the object
+//     if (keys.length > 0) {
+//         // Get the first key
+//         let firstKey = keys[0];
 
-        // Update the value for the first key (if needed)
-        // (You can choose to update it or skip it)
+//         // Update the value for the first key (if needed)
+//         // (You can choose to update it or skip it)
 
-        // Loop through the rest of the keys starting from the second key
-        for (let i = 1; i < keys.length; i++) {
-            let name = keys[i];
-            personaAccounts[name] = initialAmount;
-        } */
-	let howMuchBank = prompt("How much is in the bank?");
-	initialBank = parseInt(howMuchBank);
-	personaAccounts["Bank"] = initialBank;
-	let howMuchGo = prompt(
-		"How much will player recieve salary when passing 'GO'?"
-	);
-	salary = parseInt(howMuchGo);
-};
+//         // Loop through the rest of the keys starting from the second key
+//         for (let i = 1; i < keys.length; i++) {
+//             let name = keys[i];
+//             personaAccounts[name] = initialAmount;
+//         } */
+// 	let howMuchBank = prompt("How much is in the bank?");
+// 	initialBank = parseInt(howMuchBank);
+// 	personaAccounts["Bank"] = initialBank;
+// 	let howMuchGo = prompt(
+// 		"How much will player recieve salary when passing 'GO'?"
+// 	);
+// 	salary = parseInt(howMuchGo);
+// };
 
 let fromPerson;
 let toPerson;
@@ -238,4 +238,4 @@ let ledger = {};
 // 	newGameInitials();
 // });
 
-export { personaAccounts, timeStamp, actualiseDateTime, newGame, oldGames };
+export { timeStamp, actualiseDateTime };

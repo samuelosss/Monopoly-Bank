@@ -1,4 +1,3 @@
-
 <br />
 <% if (locals.allGameDetails && locals.allGameDetails.length > 0) { %>
 <br />
@@ -6,11 +5,9 @@
 <% allGameDetails.forEach((game) => { %>
 <div>
 	<p>
-		Game number <%= game.gameNumber %> Game name: <%= game.gameName %> <%=
-		game.timestamp %>
+		Game number <%= game.gameNumber %> : <%= game.gameName %>, <%= game.timestamp%>
 	</p>
 </div>
-<% }); %> <% } else { %> 
-	No old games stored in allGameDetails variable or some error 
-<% } %>
+<% }); %> <% } else { %> No old games stored in allGameDetails variable or some
+error <% } %>
 <br />

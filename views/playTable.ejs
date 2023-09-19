@@ -1,25 +1,20 @@
+<%- include("./partials/head.ejs") %> <% if (locals.allGameDetails &&
+locals.allGameDetails.length > 0) { %> Game: <%=
+allGameDetails[allGameDetails.length - 1].gameName %> <% } else { %>
+allGameDetails empty or some error <% } %> <br /><br />
 <div class="money-area">
 	<div class="players-area">
-		<% let accountsKeys = Object.keys(personaAccounts); %> <% let accountsValues
-		= Object.values(personaAccounts); %> <% for (let i = 1; i <=
-		accountsKeys.length ; i++) { %>
-		<div class="player-segment" id="<%- i %>">
-			<div class="money"><%= accountsValues[i] %></div>
-			<div class="player person"><%= accountsKeys[i] %></div>
-			<div class="salary">Salary / Pass GO</div>
-		</div>
-		<% }; %>
+		<% playersCash = [] %> <% for (let i = 0; i < listOfPlayers.length ; i++) {
+		%> <% let playerName = listOfPlayers[i]; %> 
+		<% let playerData = {name:	playerName , cash: initialAmount}; %>
 
-		<div class="player-segment" id="2">
-			<div class="money">1500</div>
-			<div class="player person">Eve</div>
+		<div class="player-segment" id="<%- i %>">
+			<div class="money"><%= playerData.cash %></div>
+			<div class="player person"><%= playerData.name %></div>
 			<div class="salary">Salary / Pass GO</div>
 		</div>
-		<div class="player-segment" id="3">
-			<div class="money">1500</div>
-			<div class="player person">person3</div>
-			<div class="salary">Salary / Pass GO</div>
-		</div>
+
+		<% playersCash.push(); %> <% }; %>
 	</div>
 	<div class="public-area">
 		<div class="bank-house person" id="bank">Bank</div>
@@ -30,9 +25,10 @@
 	<div class="ledger" id="ledger">LEDGER</div>
 	<div class="dice" id="dice">DICE ROLL</div>
 </div>
-<button id="add-person">Add Person</button>
-<button id="game-initial">New Game Init Amounts</button>
 <button id="new-game">New Game</button><br />
+<!-- <button id="add-person">Add Person</button> 
+<button id="game-initial">New Game Init Amounts</button>
+-->
 <!-- <div id="ledger-output"></div> 
 		TOTO JE DALSI KOUSEK
 		-->
@@ -44,4 +40,6 @@
 	referrerpolicy="no-referrer"
 ></script>
 <script src="./scripts/diceRoll.js"></script>
-<script src="scripts/moneyTransfers.js"></script>
+<script src="scripts/gamePlay.js"></script>
+
+<%- include("partials/footer.ejs") %>
