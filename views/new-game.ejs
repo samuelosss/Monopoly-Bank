@@ -22,4 +22,16 @@ New Game
 <% } %>
 <br />
 <a href="./add-players"><button>NEXT</button></a>
+
+<h1>Old games</h1>
+<% if (locals.allGameDetails && locals.allGameDetails.length > 0) { %>
+<% allGameDetails.forEach(function(number) { %>
+Game <%= number.gameNumber %>, Game name: <%= number.gameName %>, Time: <%= number.timestamp %> <br>
+<% }) %>
+<% } else { %>
+
+ array 	allGameDetails empty or other problem
+
+<% } %> 
+
 <%- include("partials/footer.ejs") %>

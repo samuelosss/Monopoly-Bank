@@ -8,62 +8,74 @@
 let timeStamp;
 
 const actualiseDateTime = () => {
-	let dayOfWeekName;
+	// let dayOfWeekName;
 	let date = new Date();
 
-	let [month, day, year, hours, minutes, dayOfWeek, seconds] = [
-		date.getMonth() + 1,
-		date.getDate(),
-		date.getFullYear(),
-		date.getHours(),
-		date.getMinutes(),
-		date.getDay(),
-		date.getSeconds(),
-	];
+	// let [month, day, year, hours, minutes, dayOfWeek, seconds] = [
+	// 	date.getMonth() + 1,
+	// 	date.getDate(),
+	// 	date.getFullYear(),
+	// 	date.getHours(),
+	// 	date.getMinutes(),
+	// 	date.getDay(),
+	// 	date.getSeconds(),
+	// ];
 
-	const whatDayOfWeek = () => {
-		switch (dayOfWeek) {
-			case 0:
-				dayOfWeekName = "Sunday";
-				break;
-			case 1:
-				dayOfWeekName = "Monday";
-				break;
-			case 2:
-				dayOfWeekName = "Tuesday";
-				break;
-			case 3:
-				dayOfWeekName = "Wednesday";
-				break;
-			case 4:
-				dayOfWeekName = "Thursday";
-				break;
-			case 5:
-				dayOfWeekName = "Friday";
-				break;
-			case 6:
-				dayOfWeekName = "Saturday";
-				break;
-			default:
-				console.log("It's broken man!");
-				break;
-		}
+	// const whatDayOfWeek = () => {
+	// 	switch (dayOfWeek) {
+	// 		case 0:
+	// 			dayOfWeekName = "Sunday";
+	// 			break;
+	// 		case 1:
+	// 			dayOfWeekName = "Monday";
+	// 			break;
+	// 		case 2:
+	// 			dayOfWeekName = "Tuesday";
+	// 			break;
+	// 		case 3:
+	// 			dayOfWeekName = "Wednesday";
+	// 			break;
+	// 		case 4:
+	// 			dayOfWeekName = "Thursday";
+	// 			break;
+	// 		case 5:
+	// 			dayOfWeekName = "Friday";
+	// 			break;
+	// 		case 6:
+	// 			dayOfWeekName = "Saturday";
+	// 			break;
+	// 		default:
+	// 			console.log("It's broken man!");
+	// 			break;
+	// 	}
+	// };
+	// whatDayOfWeek();
+	// timeStamp =
+	// 	dayOfWeekName +
+	// 	", " +
+	// 	day +
+	// 	". " +
+	// 	month +
+	// 	". " +
+	// 	year +
+	// 	" " +
+	// 	hours +
+	// 	":" +
+	// 	minutes +
+	// 	":" +
+	// 	seconds;
+
+	const options = {
+		weekday: "long",
+		day: "2-digit",
+		month: "2-digit",
+		year: "numeric",
+		hour: "2-digit",
+		minute: "2-digit",
+		second: "2-digit",
 	};
-	whatDayOfWeek();
-	timeStamp =
-		dayOfWeekName +
-		", " +
-		day +
-		". " +
-		month +
-		". " +
-		year +
-		" " +
-		hours +
-		":" +
-		minutes +
-		":" +
-		seconds;
+
+	timeStamp = date.toLocaleString("en-GB", options);
 };
 
 const oldGames = {};
@@ -171,26 +183,26 @@ function playerModify() {
 // 	salary = parseInt(howMuchGo);
 // };
 
-let fromPerson;
-let toPerson;
-let amount;
+// let fromPerson;
+// let toPerson;
+// let amount;
 
-const ledgerInput = (fromPerson, toPerson) => {
-	let amountInput = prompt("How much do you transfer?"); // how much do you transfer
-	amount = parseFloat(amountInput); // parsing input string to floating-point (decimal) number
-	if (!isNaN(amount)) {
-		personaAccounts[fromPerson] -= amount;
-		personaAccounts[toPerson] += amount;
-		// for (var i = 1; i <= 6; i++)
-		// 	console.log("Player " + i + " : " + personaAccounts[i]);
-		console.log(
-			"New balance " + fromPerson + " " + personaAccounts[fromPerson]
-		);
-		console.log("New balance " + toPerson + " " + personaAccounts[toPerson]);
-	} else {
-		alert("Insert valid number!");
-	}
-};
+// const ledgerInput = (fromPerson, toPerson) => {
+// 	let amountInput = prompt("How much do you transfer?"); // how much do you transfer
+// 	amount = parseFloat(amountInput); // parsing input string to floating-point (decimal) number
+// 	if (!isNaN(amount)) {
+// 		personaAccounts[fromPerson] -= amount;
+// 		personaAccounts[toPerson] += amount;
+// 		// for (var i = 1; i <= 6; i++)
+// 		// 	console.log("Player " + i + " : " + personaAccounts[i]);
+// 		console.log(
+// 			"New balance " + fromPerson + " " + personaAccounts[fromPerson]
+// 		);
+// 		console.log("New balance " + toPerson + " " + personaAccounts[toPerson]);
+// 	} else {
+// 		alert("Insert valid number!");
+// 	}
+// };
 
 let ledger = {};
 // 1 { giver: who_pays , reciever: to_whom_he_pays , amount: how_much }

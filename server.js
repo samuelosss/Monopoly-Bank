@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/new-game", (req, res) => {
-	res.render("./new-game.ejs");
+	res.render("./new-game.ejs", { allGameDetails });
 });
 
 let newGameName = null;
@@ -51,7 +51,8 @@ app.post("/new-game", (req, res) => {
 	allGameDetails.push(gameDetails);
 	console.log("Last added game name: " + newGameName);
 	console.log("Number of saved games: " + allGameDetails.length);
-	res.render("./new-game.ejs", { newGameName, gameDetails });
+	console.log("All games objects in array: " + allGameDetails);
+	res.render("./new-game.ejs", { newGameName, gameDetails, allGameDetails });
 });
 
 let listOfPlayers = [];
@@ -126,6 +127,7 @@ app.get("/playTable", (req, res) => {
 
 let fromPerson = null;
 let toPerson = null;
+let ledger = {};
 
 app.post("/playTable", (req, res) => {
 	const amount = req.body.dataToSend.amount;
@@ -135,6 +137,18 @@ app.post("/playTable", (req, res) => {
 	console.log("To person: " + toPerson);
 	console.log("From person: " + fromPerson);
 	console.log("Sent amount: " + amount);
+
+	// update ledger
+	(function ledgerUpdate() {
+		let ledgerLine = Object.keys(ledger).length + 1;
+		ledger[ledgerLine] = {
+			giver: fromPerson,
+			reciever: toPerson,
+			cash: amount,
+		};
+	})();
+	console.log("Current ledger: " + ledger);
+
 	// You can send a response back to the client
 	res.json({ result: `You entered: ${amount}` });
 	//reset from to
