@@ -4,20 +4,21 @@ allGameDetails[allGameDetails.length - 1].gameName %> <% } else { %>
 allGameDetails empty or some error <% } %> <br /><br />
 <div class="money-area">
 	<div class="players-area">
-		<% playersCash = [] %> <% for (let i = 0; i < listOfPlayers.length ; i++) {
-		%> <% let playerName = listOfPlayers[i]; %> 
-		<% let playerData = {name:	playerName , cash: initialAmount}; %>
+		<% for (let i = 1; i < personas.length ; i++) { %>
 
-		<div class="player-segment" id="<%- i %>">
-			<div class="money"><%= playerData.cash %></div>
-			<div class="player person"><%= playerData.name %></div>
+		<div class="player-segment persona-segment" id="player-<%- i %>">
+			<div class="money"><%= personas[i].cash %></div>
+			<div class="player persona-name"><%= personas[i].name %></div>
 			<div class="salary">Salary / Pass GO</div>
 		</div>
 
-		<% playersCash.push(); %> <% }; %>
+		<% }; %>
 	</div>
 	<div class="public-area">
-		<div class="bank-house person" id="bank">Bank</div>
+		<div class="persona-segment" id="bank">
+			<div class="bank-house persona-name"><%= personas[0].name %></div>
+			<div class="money"><%= personas[0].cash %></div>
+		</div>
 		<div class="all person" id="all">ALL</div>
 	</div>
 </div>
@@ -29,9 +30,10 @@ allGameDetails empty or some error <% } %> <br /><br />
 <!-- <button id="add-person">Add Person</button> 
 <button id="game-initial">New Game Init Amounts</button>
 -->
-<!-- <div id="ledger-output"></div> 
-		TOTO JE DALSI KOUSEK
-		-->
+<div id="ledger-output">
+	<% if (locals.ledger) { %> <%= JSON.stringify(locals.ledger) %> <% } else { %>
+	not getting ledger data <% } %>
+</div>
 
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"

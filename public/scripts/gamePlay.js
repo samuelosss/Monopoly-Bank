@@ -35,6 +35,26 @@ const ledgerInput = async (fromPerson, toPerson) => {
 					// Handle a successful response from the server
 					const result = await response.json();
 					console.log("Server response:", result);
+
+					// Update the #ledger-output element with the new ledger data
+					// $("#ledger-output").html(result.ledger);
+
+					// advanced
+					// Update the #ledger-output element with the new ledger data
+					const ledgerOutput = $("#ledger-output");
+					ledgerOutput.empty(); // Clear previous content
+
+					for (const key in result.ledger) {
+						if (result.ledger.hasOwnProperty(key)) {
+							const transaction = result.ledger[key];
+							const transactionHtml = `
+      <div class="transaction">
+        Transaction ${key}: Giver: ${transaction.giver}, Receiver: ${transaction.reciever}, Cash: ${transaction.cash}
+      </div>
+    `;
+							ledgerOutput.prepend(transactionHtml);
+						}
+					}
 				} else {
 					// Handle errors here
 					console.error("Error:", response.statusText);
@@ -52,11 +72,13 @@ const ledgerInput = async (fromPerson, toPerson) => {
 // 1 { giver: who_pays , reciever: to_whom_he_pays , amount: how_much }
 
 // Perform transfer between two personas clicked in order giver >> reciever and update ledger and their balances
-$(".person").on("click", function () {
+$(".persona-name").on("click", function () {
 	// take name of the persona clicked
+	// const textFromNestedDiv = $(this).find(".persona-name").text();
 
 	if (!fromPerson) {
 		// if empty put something from clicked element
+		// fromPerson = textFromNestedDiv;
 		fromPerson = $(this).text();
 		console.log("From: " + fromPerson);
 	} else {

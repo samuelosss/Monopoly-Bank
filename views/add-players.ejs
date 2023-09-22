@@ -5,13 +5,17 @@ Game: <%= allGameDetails[allGameDetails.length - 1].gameName %>
 allGameDetails empty or some error 
 <% } %> 
 
-<% listOfPlayers.forEach(player => { %>
+<% if (locals.personas) { %>
+ 
+
+<% personas.slice(1).forEach(player => { %>
     <div>
         
-        <%= player %>
+        <%= player.name %>
        
     </div>
 <% });   %>
+<% } %>
 
 
 <form action="/add-players" method="post">
