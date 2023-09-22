@@ -60,7 +60,7 @@ app.post("/new-game", (req, res) => {
 	res.render("./new-game.ejs", { newGameName, gameDetails, allGameDetails });
 });
 
-let listOfPlayers = [];
+// let listOfPlayers = [];
 
 app.get("/add-players", (req, res) => {
 	res.render("./add-players.ejs", { allGameDetails, personas });
@@ -97,8 +97,8 @@ const personas = [];
 let initialBank = 99000;
 let initialAmount = 1500;
 let salary = 200;
-let bankCash = [];
-let playersCash = [];
+// let bankCash = [];
+// let playersCash = [];
 
 app.post("/add-players", (req, res) => {
 	let newPlayerName = req.body.playerName;
@@ -159,12 +159,12 @@ app.post("/game-initial", (req, res) => {
 app.get("/playTable", (req, res) => {
 	res.render("./playTable.ejs", {
 		allGameDetails,
-		listOfPlayers,
+		// listOfPlayers,
 		initialBank,
 		initialAmount,
 		salary,
-		bankCash,
-		playersCash,
+		// bankCash,
+		// playersCash,
 		ledger,
 		personas,
 	});
@@ -196,16 +196,34 @@ app.post("/playTable", (req, res) => {
 	})();
 	console.log("Current ledger: " + ledger);
 
+	// Updating personas cash balances
+	(function balanceUpdate() {
+		const indexReciever = personas.findIndex(
+			(person) => person.name === fromPerson
+		);
+		const indexGiver = personas.findIndex((person) => person.name === toPerson);
+
+		if (indexReciever !== -1 && indexGiver !== -1) {
+			personas[indexReciever].cash += amount; // Add reciever cash
+			personas[indexGiver].cash -= amount; // Subtract giver's account
+			console.log("Reciever's account: " + personas[indexReciever].cash);
+			console.log("Giver's account: " + personas[indexGiver].cash);
+		} else {
+			// Handle the case where 'fromPerson' or 'toPerson' is not found in the array
+			console.error("Person not found in personas array");
+		}
+	})();
+
 	// You can send a response back to the client
 	res.json({
 		result: `You entered: ${amount}`,
 		allGameDetails,
-		listOfPlayers,
+		// listOfPlayers,
 		initialBank,
 		initialAmount,
 		salary,
-		bankCash,
-		playersCash,
+		// bankCash,
+		// playersCash,
 		ledger,
 		personas,
 	});
