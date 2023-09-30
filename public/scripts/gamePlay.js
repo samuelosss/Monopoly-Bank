@@ -10,6 +10,8 @@ let fromPerson;
 let toPerson;
 let amount;
 
+let result;
+
 const ledgerInput = async (fromPerson, toPerson) => {
 	let amountInput = prompt("How much do you transfer?"); // how much do you transfer
 	amount = parseInt(amountInput); // parsing input string to floating-point (decimal) number
@@ -33,7 +35,7 @@ const ledgerInput = async (fromPerson, toPerson) => {
 				});
 				if (response.ok) {
 					// Handle a successful response from the server
-					const result = await response.json();
+					result = await response.json();
 					console.log("Server response:", result);
 
 					// Update the #ledger-output element with the new ledger data
@@ -55,6 +57,53 @@ const ledgerInput = async (fromPerson, toPerson) => {
 							ledgerOutput.prepend(transactionHtml);
 						}
 					}
+
+					let ledgerKeys = Object.keys(result.ledger);
+					let lastLedgerKey = ledgerKeys.length;
+
+					// Find the element with class 'persona-name' and text matching toPerson
+					let $personaTo = $(
+						'.persona-name:contains("' +
+							result.ledger[lastLedgerKey].reciever +
+							'")'
+					);
+					let $personaFrom = $(
+						'.persona-name:contains("' +
+							result.ledger[lastLedgerKey].giver +
+							'")'
+					);
+
+					let personaToNewCash = result.personas.find(
+						(someone) => someone.name === result.ledger[lastLedgerKey].reciever
+					)?.cash;
+
+					let personaFromNewCash = result.personas.find(
+						(someone) => someone.name === result.ledger[lastLedgerKey].giver
+					)?.cash;
+
+					// console.log("personaToNewCash: " + personaToNewCash);
+					// console.log("personaFromNewCash: " + personaFromNewCash);
+
+					$personaTo.siblings(".money").html(personaToNewCash);
+					$personaFrom.siblings(".money").html(personaFromNewCash);
+					// Extract the cash values for the giver and receiver from the server's response
+					// const cashForGiver = result.personas.find(
+					// 	(person) => person.name === transaction.giver
+					// )?.cash;
+					// const cashForReceiver = result.personas.find(
+					// 	(person) => person.name === transaction.receiver
+					// )?.cash;
+
+					// Update the cash values based on the server response
+					// if ($balanceToChange.length > 0 && cashForReceiver !== undefined) {
+					// 	// Change the text of the found element to the new cash value for the receiver
+					// 	$balanceToChange.text(cashForReceiver);
+					// }
+
+					// if ($balanceFromChange.length > 0 && cashForGiver !== undefined) {
+					// 	// Change the text of the found element to the new cash value for the giver
+					// 	$balanceFromChange.text(cashForGiver);
+					// }
 				} else {
 					// Handle errors here
 					console.error("Error:", response.statusText);

@@ -199,9 +199,11 @@ app.post("/playTable", (req, res) => {
 	// Updating personas cash balances
 	(function balanceUpdate() {
 		const indexReciever = personas.findIndex(
+			(person) => person.name === toPerson
+		);
+		const indexGiver = personas.findIndex(
 			(person) => person.name === fromPerson
 		);
-		const indexGiver = personas.findIndex((person) => person.name === toPerson);
 
 		if (indexReciever !== -1 && indexGiver !== -1) {
 			personas[indexReciever].cash += amount; // Add reciever cash
